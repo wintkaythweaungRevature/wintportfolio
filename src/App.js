@@ -27,7 +27,7 @@ const videos = [
       <div className="w-80 bg-[#000066] text-white fixed h-full flex flex-col items-center p-10 shadow-2xl z-50">
   {/* ROUND PROFILE IMAGE */}
   <img
-    src="/images/profile.jpg" // ဒီနေရာမှာ နာမည်နဲ့ Extension မှန်ဖို့ လိုပါတယ်။
+    src="/Images/profile.jpg" // ဒီနေရာမှာ နာမည်နဲ့ Extension မှန်ဖို့ လိုပါတယ်။
    alt = "Wint Kay Thwe Aung"
     className="w-40 h-40 rounded-full border-4 border-white object-cover mb-6 shadow-2xl"
   />
