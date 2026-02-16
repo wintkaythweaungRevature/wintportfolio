@@ -1,3 +1,8 @@
-name = "wint-portfolio"
-pages_build_output_dir = "./dist"
-compatibility_date = "2026-02-16"
+
+{
+    "name": "wint-portfolio",
+    "compatibility_date": "2026-02-16",
+    "assets": {
+      "directory": "./dist"
+	    }
+    }
