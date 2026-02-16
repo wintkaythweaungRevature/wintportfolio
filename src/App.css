@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sidebar scroll မဖြစ်အောင် တားဆီးထားခြင်း */
+.fixed-sidebar {
+  scrollbar-width: none; /* Firefox */
+}
+.fixed-sidebar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}

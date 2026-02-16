@@ -1,0 +1,15 @@
+services:
+  # React App Service
+  react-web:
+    image: wint-portfolio-final
+    ports:
+      - "3000:80"
+    restart: always
+
+  # Cloudflare Tunnel Service
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: always
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=eyJhIjoiZWI5OGM4NzI2M2RjZWEyYmEwY2E1M2E5OGVjYTJkNWUiLCJzIjoiWWpGaVpESm1ZMlF0WkdWaVpTMDBZV0ZsTFRsaVpHUXRObUUyTURjMVptVXhObUkxIiwidCI6IjMzNzA5NjBhLTc3ZWYtNGIyYS05NWFiLWVkM2EzYTliYTc4MiJ9
