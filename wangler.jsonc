@@ -1,8 +1,8 @@
 
 {
-    "name": "wint-portfolio",
+    "name": "worker-name",
     "compatibility_date": "2026-02-16",
     "assets": {
       "directory": "./dist"
-	    }
     }
+  }
