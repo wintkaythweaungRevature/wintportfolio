@@ -271,15 +271,24 @@ Curiosity drives everything I do.
 
           {/* FOOTER */}
           <footer className="text-center border-t border-slate-100 pt-20 pb-10">
-            <div className="flex justify-center gap-10 mb-8">
-              <Github className="cursor-pointer hover:text-blue-600 transition" size={30} />
-              <Linkedin className="cursor-pointer hover:text-blue-600 transition" size={30} />
-              <Mail className="cursor-pointer hover:text-blue-600 transition" size={30} />
-            </div>
-            <p className="text-xs font-bold tracking-[0.4em] text-gray-400 uppercase">
-              © {new Date().getFullYear()} Wint Kay Thwe Aung • Crafted with React
-            </p>
-          </footer>
+  <div className="flex justify-center gap-10 mb-8">
+    <a href="https://github.com/wintkaythweaungRevature" target="_blank" rel="noreferrer">
+      <Github className="cursor-pointer hover:text-blue-600 transition" size={30} />
+    </a>
+    
+    <a href="https://www.linkedin.com/in/wint-kay-thwe-aung-0793451b5/" target="_blank" rel="noreferrer">
+      <Linkedin className="cursor-pointer hover:text-blue-600 transition" size={30} />
+    </a>
+    
+    <a href="mailto:ms.wintkaythweaung@gmail.com">
+      <Mail className="cursor-pointer hover:text-blue-600 transition" size={30} />
+    </a>
+  </div>
+
+  <p className="text-xs font-bold tracking-[0.4em] text-gray-400 uppercase">
+    © {new Date().getFullYear()} Wint Kay Thwe Aung • Crafted with React
+  </p>
+</footer>
 
         </div>
       </div>
