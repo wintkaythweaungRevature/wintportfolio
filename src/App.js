@@ -16,7 +16,7 @@ if (typeof document !== 'undefined') {
 }
  const hobbies = 
  [
-  { id: 1, src: "/images/1.jpg", title: "Painting" },
+  { id: 1, src: "/images/intotheforest.jpg", title: "Painting" },
   { id: 2, src: "/images/bluepaint.jpg", title: "Art " },
   { id: 3, src: "/images/roadtrippaint.jpg", title: "Road Trip Painting" },
   
@@ -110,7 +110,6 @@ const videos = [
       { id: "intro", label: "Introduction" },
       { id: "skills", label: "Skills" },
       { id: "projects", label: "Projects" },
-      { id: "experiences", label: "Experiences" },
       
       { id: "cv", label: "CV" },
       { id: "hobbies", label: "Hobbies" }
@@ -258,7 +257,14 @@ const videos = [
           <div className="pt-6 border-t border-gray-100">
             <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">Sincerely,</p>
             <p className="text-2xl font-serif text-[#000066] mt-2" style={{ fontFamily: "'Satisfy', cursive" }}>Wint Kay Thwe Aung</p>
-          </div>
+          
+          </div> 
+          <img
+    src="/images/profile.jpg" // ဒီနေရာမှာ နာမည်နဲ့ Extension မှန်ဖို့ လိုပါတယ်။
+   alt = "Wint Kay Thwe Aung"
+    className="w-40 h-40 rounded-full border-4 border-white object-cover shadow-2xl mb-0"
+  />
+
         </div>
 
         {/* Footer - Actions */}
