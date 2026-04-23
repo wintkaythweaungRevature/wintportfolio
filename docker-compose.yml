@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  react-app:
+    # Build context ကို လက်ရှိ folder လို့ သတ်မှတ်ထားပါတယ်
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wintkaythweaugn/wint-portfolio-final:latest
+    container_name: react-portfolio-app
+    # Local မှာ စစ်ဖို့ port 3000 ကို ဖွင့်ထားဆဲဖြစ်ပါတယ်
+    ports:
+      - "3000:80"
+    restart: always
+    networks:
+      - portfolio-network
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-tunnel
+    restart: always
+    command: tunnel run
+    environment:
+      # .env ဖိုင်ထဲက CF_TUNNEL_TOKEN ကို လှမ်းယူပါမယ်
+      TUNNEL_TOKEN: ${CF_TUNNEL_TOKEN}
+    depends_on:
+      - react-app
+    networks:
+      - portfolio-network
+
+# Network သီးသန့်ခွဲထားခြင်းဖြင့် container ၂ ခုကြား ဆက်သွယ်မှု ပိုကောင်းစေပါတယ်
+networks:
+  portfolio-network:
+    driver: bridge
+   
+    
