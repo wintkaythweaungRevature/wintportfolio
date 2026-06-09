@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Card, CardContent } from "./Component/UI/Card";
 import "./App.css";
+import Experiences from './Component/UI/Experiences.js'; // Adjust the path if it's in a subfolder like ./components/Experiences
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("ai");
@@ -110,6 +111,7 @@ const videos = [
       { id: "intro", label: "Introduction" },
       { id: "skills", label: "Skills" },
       { id: "projects", label: "Projects" },
+      {id : "experience", label: "Experience" },
       
       { id: "cv", label: "CV" },
       { id: "hobbies", label: "Hobbies" }
@@ -254,16 +256,33 @@ const videos = [
             Thank you for your time and consideration. I would welcome the opportunity to discuss how my technical skills in <strong>.NET</strong> and <strong>cloud architecture</strong> can support your firm’s digital infrastructure.
           </p>
 
-          <div className="pt-6 border-t border-gray-100">
-            <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">Sincerely,</p>
-            <p className="text-2xl font-serif text-[#000066] mt-2" style={{ fontFamily: "'Satisfy', cursive" }}>Wint Kay Thwe Aung</p>
-          
-          </div> 
-          <img
-    src="/images/profile.jpg" // ဒီနေရာမှာ နာမည်နဲ့ Extension မှန်ဖို့ လိုပါတယ်။
-   alt = "Wint Kay Thwe Aung"
+         <div className="pt-6 border-t border-gray-100 flex justify-between items-end">
+  {/* Left Side: Name and Signature */}
+  <div>
+    <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">
+      Sincerely,
+    </p>
+    <p 
+      className="text-2xl font-serif text-[#000066] mt-2" 
+      style={{ fontFamily: "'Satisfy', cursive" }}
+    >
+      Wint Kay Thwe Aung
+    </p>
+  </div>
+
+  {/* Right Side: Profile Image */}
+  <img
+    src="/images/profile.jpg"
+    alt="Wint Kay Thwe Aung"
     className="w-40 h-40 rounded-full border-4 border-white object-cover shadow-2xl mb-0"
   />
+
+  {/* Place this between your Projects and CV sections */}
+<section id="experience">
+  <Experiences />
+</section>
+</div>
+
 
         </div>
 
